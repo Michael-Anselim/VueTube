@@ -71,7 +71,7 @@ Through this project, I practiced:
 
 ## 📸 Preview
 
-![alt text]![alt text](image.png)
+![alt text](image-2.png)
 
 ## 🤝 Contributing
 
