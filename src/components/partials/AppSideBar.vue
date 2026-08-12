@@ -37,7 +37,9 @@ const moreItems = [
 </script>
 
 <template>
-  <aside class="rid grid-cols-1 space-y-2 max-w-48 py-8">
+  <aside
+    class="hidden md:block space-y-2 max-w-48 py-8 px-4 fixed z-20 top-0 mt-12 overfloe-y-hidden h-full"
+  >
     <div class="grid grid-cols-1 space-y-2">
       <!-- Basic links -->
       <div
@@ -51,13 +53,13 @@ const moreItems = [
       <Separator />
     </div>
     <!-- Sign in div -->
-    <div class="space-y-2">
+    <div class="hidden xl:block space-y-2">
       <p class="text-sm">Sign in to like videos, comment, and subscribe.</p>
       <UserMenu />
       <Separator />
     </div>
     <!-- Explore div -->
-    <div>
+    <div class="hidden xl:block">
       <h1 class="text-lg mb-3 font-semibold">Explore</h1>
       <div class="grid grid-cols-1 space-y-2">
         <div
@@ -72,7 +74,7 @@ const moreItems = [
       </div>
     </div>
     <!-- More from youtube div -->
-    <div>
+    <div class="hidden xl:block">
       <h1 class="text-lg mb-3 font-semibold">More from VueTube</h1>
       <div class="grid grid-cols-1 space-y-2">
         <div
@@ -87,7 +89,7 @@ const moreItems = [
       </div>
     </div>
     <!-- Report div -->
-    <div>
+    <div class="hidden xl:block">
       <div class="flex gap-2 py-2">
         <Flag />
         <span class="text-sm">Report history</span>
@@ -95,7 +97,7 @@ const moreItems = [
       <Separator />
     </div>
     <!-- Copyright div -->
-    <div class="text-sm flex flex-col gap-2">
+    <div class="text-sm xl:flex flex-col gap-2 hidden">
       <p>This app is developed for learning purposes only</p>
       <P> No commercial or any unrelated uses are allowed </P>
       <P class="text-xs text-gray-400"> @2026 VueTube LLC</P>

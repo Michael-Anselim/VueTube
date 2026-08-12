@@ -1,10 +1,21 @@
 <script setup lang="js">
-import { EllipsisVertical, Menu, Mic, Search, UserCircle } from "@lucide/vue";
+import {
+  Bell,
+  EllipsisVertical,
+  Menu,
+  Mic,
+  Search,
+  SearchX,
+  UserCircle,
+} from "@lucide/vue";
 import AppLogo from "../AppLogo.vue";
 import UserMenu from "../../ui/UserMenu.vue";
 </script>
 <template>
-  <nav class="flex items-center py-1 px-2 shadow-xs mt-2">
+  <!-- Desktop screen menu -->
+  <nav
+    class="hidden md:flex items-center py-2 px-4 shadow-xs w-full fixed z-20 bg-gray-50 top-0 overflow-x-hidden"
+  >
     <!-- Menu  button and Logo -->
     <div class="flex items-center gap-4 w-[25%]">
       <Menu size="20" />
@@ -36,6 +47,18 @@ import UserMenu from "../../ui/UserMenu.vue";
         <EllipsisVertical size="20" />
       </div>
       <UserMenu />
+    </div>
+  </nav>
+
+  <!-- Mobile screen menu -->
+  <nav
+    class="flex items-center justify-between sticky top-0 z-20 bg-gray-50 shadow-xs py-2 px-4 md:hidden"
+  >
+    <AppLogo />
+
+    <div class="flex items-center gap-4">
+      <Bell size="20" />
+      <Search size="20" />
     </div>
   </nav>
 </template>
